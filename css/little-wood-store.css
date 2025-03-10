@@ -1,0 +1,174 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}    
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+footer form {
+    margin-top: 15px;
+    display: inline-block;
+    text-align: left;
+}
+
+footer label {
+    display: block;
+    margin-top: 10px;
+}
+
+footer input, footer textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+footer button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer button:hover {
+    background-color: #25D366; /* Color de hover */
+
+}
+
+main {
+    margin: 20px0;
+}
+
+.departamentos {
+    display: flex;
+    justify-content: space-around;
+}
+
+.departamento img {
+    width: 150px;
+    height: 100px;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+
+
+.producto {
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 300px;
+    
+}
+
+.producto  img {
+    width: 200px;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+footer form {
+    margin-top: 15px;
+    display: inline-block;
+    text-align: left;
+}
+
+footer label {
+    display: block;
+    margin-top: 10px;
+}
+
+footer input, footer textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+footer button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer button:hover {
+    background-color: #25D366; /* Color de hover */
+}
+
+
+
+.grid-container {
+    max-width: 80%;
+    display: flex;
+    align-items: space-around;
+    flex-direction: column;
+    
+}
+
+.row{
+    display: flex;
+    justify-content: space-around;
+}
+
+.wood-list-products{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
