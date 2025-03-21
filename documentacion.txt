@@ -37,3 +37,46 @@ Estructura del Documento HTML
         Conclusión
         La página "Little Wood Store" es un buen comienzo para una tienda en línea que ofrece productos de madera. Con una estructura clara y un diseño responsivo, está lista para ser mejorada con funcionalidades adicionales que enriquecerán la experiencia del usuario.
 
+Gabriel 
+Estructura del Documento HTML
+1. Cabecera (<head>)
+Charset: Se establece el conjunto de caracteres en UTF-8 para soportar caracteres especiales.
+Viewport: Se configura para hacer la página responsiva, adaptándose a diferentes tamaños de pantalla.
+Título: Se define el título de la página como "Tienda de Regalos".
+Estilos: Se incluyen estilos CSS internos para definir la apariencia de la página.
+Scripts: Se incluyen funciones JavaScript para manejar la interactividad.
+2. Cuerpo (<body>)
+Encabezado (<header>):
+Contiene el título principal de la tienda y un menú de navegación con enlaces a otras secciones.
+Contenedor de Productos (.container):
+Presenta una cuadrícula de productos, cada uno con una imagen, nombre y un evento de clic que muestra detalles adicionales en un modal.
+Cada producto incluye información específica como descripción y precio.
+Modal de Detalles:
+Un modal que se activa al hacer clic en un producto, mostrando una imagen ampliada, descripción y precio.
+Incluye un botón para añadir el producto al carrito.
+Pie de Página (<footer>):
+Proporciona información sobre derechos de autor.
+Características Principales
+Diseño Responsivo: La página utiliza propiedades CSS como grid para organizar los productos en columnas, adaptándose a diferentes resoluciones de pantalla.
+Interactividad:
+Al hacer clic en un producto, se muestra un modal con detalles ampliados.
+Incluye un sistema de alerta para confirmar que el producto ha sido añadido al carrito.
+Estilo Visual:
+Fondo con imagen que cubre toda la pantalla.
+Colores de fondo y texto que mejoran la legibilidad y la estética.
+Tecnologías Utilizadas
+HTML: Estructura básica de la página usando HTML5.
+CSS: Estilos incorporados para definir la apariencia visual y el diseño responsivo.
+JavaScript: Funciones para manejar la interacción del usuario, como mostrar el modal y agregar productos al carrito.
+Funcionalidad del Código JavaScript
+mostrarDetalles(imagen, descripcion, precio):
+Muestra el modal con la información del producto seleccionado.
+Actualiza el contenido del modal con la imagen, descripción y precio del producto.
+closeModal():
+Cierra el modal cuando el usuario hace clic en la "X".
+agregarAlCarrito(producto):
+Muestra una alerta confirmando que el producto ha sido añadido al carrito.
+Mejoras Futuras
+Integración con Backend: Conectar el carrito de compras a un sistema de gestión de pedidos para un manejo efectivo de las transacciones.
+Validación del Formulario: Si se incorpora un formulario de contacto, añadir validaciones para mejorar la experiencia del usuario.
+Optimización de Imágenes: Considerar el uso de imágenes optimizadas para mejorar tiempos de carga.
