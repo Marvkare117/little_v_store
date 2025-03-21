@@ -1,0 +1,121 @@
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}    
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 20px;
+    color: #777;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+footer form {
+    margin-top: 15px;
+    display: inline-block;
+    text-align: left;
+}
+
+footer label {
+    display: block;
+    margin-top: 10px;
+}
+
+footer input, footer textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+footer button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer button:hover {
+    background-color: #25D366; /* Color de hover */
+
+}
+
+
+.section-intro{
+    padding: 10px;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section-intro h2 {
+    margin: 0;
+    color: #333;
+}
+
+.section-intro-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+.departamentos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+}
+
+.departamentos-container{
+    display: flex;
+    
+}
+
+.departamento img {
+    width: 300px;  /* Ajusta el ancho a 300 píxeles */
+    height: 300px; /* Ajusta la altura a 200 píxeles */
+    object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
+    border-radius: 5px; /* Añade bordes redondeados */
+}
+.departamento 
+{
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+}
+
+.departamento a {
+    text-decoration: none;
+    color: #333;
+}

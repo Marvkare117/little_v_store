@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Regalos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('file:///C:/Users/ESTACION/Documents/Github/little_v_store/img/gfit/fondo.jpg');
+            background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.8); /* Negro transparente */
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white; /* Cambiado a blanco */
+            text-decoration: none;
+        }
+        .container {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+            gap: 20px; /* Espacio entre los productos */
+        }
+        .product {
+            border-radius: 4px;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7); /* Fondo más oscuro */
+            cursor: pointer;
+            text-align: center;
+            color: white; /* Cambiado a blanco */
+        }
+        .product img {
+            width: 150px; /* Ancho fijo */
+            height: 150px; /* Altura fija */
+            object-fit: cover; /* Mantener proporción y recortar */
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8); /* Negro transparente */
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        /* Estilos del modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function mostrarDetalles(imagen, descripcion, precio) {
+            const modal = document.getElementById("myModal");
+            const modalImg = document.getElementById("modalImage");
+            const modalDesc = document.getElementById("modalDescription");
+            const modalPrice = document.getElementById("modalPrice");
+
+            modal.style.display = "block";
+            modalImg.src = imagen;
+            modalDesc.textContent = descripcion;
+            modalPrice.textContent = "Precio: " + precio;
+            document.getElementById("btnAgregar").onclick = function() {
+                agregarAlCarrito(descripcion);
+            };
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        function agregarAlCarrito(producto) {
+            alert(producto + " ha sido añadido al carrito.");
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Tienda de Regalos</h1>
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="product" onclick="mostrarDetalles('file:///C:/Users/ESTACION/Documents/Github/little_v_store/img/gfit/pulsera.png', 'Pulsera cráneos de titanio con contrachapado y eslavones retractiles.', '$20.00')">
+        <h3>Pulsera</h3>
+        <img src="file:///C:/Users/ESTACION/Documents/Github/little_v_store/img/gfit/pulsera.png" alt="Pulsera">
+    </div>
+    <div class="product" onclick="mostrarDetalles('file:///C:/Users/ESTACION/Documents/Github/little_v_store/img/gfit/cadena.png', 'Cadena cráneo de titanio.', '$30.00')">
+        <h3>Cadena</h3>
+        <img src="file:///C:/Users/ESTACION/Documents/Github/little_v_store/img/gfit/cadena.png" alt="Cadena">
+    </div>
+    <div class="product" onclick="mostrarDetalles('file:///C:/Users/ESTACION/Documents/Github/little_v_store/img/gfit/anillo.png', 'Anillo cráneo de titanio  talla 6.5 (16.9mm).', '$25.00')">
+        <h3>Anillo</h3>
+        <img src="file:///C:/Users/ESTACION/Documents/Github/little_v_store/img/gfit/anillo.png" alt="Anillo">
+    </div>
+    <div class="product" onclick="mostrarDetalles('file:///C:/Users/ESTACION/Documents/Github/little_v_store/img/gfit/aretes.png', 'Aretes cráneo de titanio con contrachapado, joyas rojas y blancas', '$15.00')">
+        <h3>Aretes</h3>
+        <img src="file:///C:/Users/ESTACION/Documents/Github/little_v_store/img/gfit/aretes.png" alt="Aretes">
+    </div>
+    <div class="product" onclick="mostrarDetalles('file:///C:/Users/ESTACION/Documents/Github/little_v_store/img/gfit/playera.png', 'Playera de algodón estampado cráneo talla M - Todos los productos son de cráneos.', '$22.00')">
+        <h3>Playera</h3>
+        <img src="file:///C:/Users/ESTACION/Documents/Github/little_v_store/img/gfit/playera.png" alt="Playera">
+    </div>
+    <div class="product" onclick="mostrarDetalles('file:///C:/Users/ESTACION/Documents/Github/little_v_store/img/gfit/taza.png', 'Taza Cráneo de cristal 300ml.', '$18.00')">
+        <h3>Taza</h3>
+        <img src="file:///C:/Users/ESTACION/Documents/Github/little_v_store/img/gfit/taza.png" alt="Taza">
+    </div>
+    <div class="product" onclick="mostrarDetalles('file:///C:/Users/ESTACION/Documents/Github/little_v_store/img/gfit/lapiceros.png', 'Lapiceros de tinta china grabado cráneo tradicional punta de 0.1mm.', '$35.00')">
+        <h3>Lapiceros</h3>
+        <img src="file:///C:/Users/ESTACION/Documents/Github/little_v_store/img/gfit/lapiceros.png" alt="Lapiceros">
+    </div>
+    <div class="product" onclick="mostrarDetalles('file:///C:/Users/ESTACION/Documents/Github/little_v_store/img/gfit/llavero.png', 'Llavero cráneo de titanio', '$28.00')">
+        <h3>Llavero</h3>
+        <img src="file:///C:/Users/ESTACION/Documents/Github/little_v_store/img/gfit/llavero.png" alt="Llavero">
+    </div>
+    <div class="product" onclick="mostrarDetalles('file:///C:/Users/ESTACION/Documents/Github/little_v_store/img/gfit/lentes.png', 'Lentes de sol Steampunks negros, diametro 13 cm.', '$40.00')">
+        <h3>Lentes de sol</h3>
+        <img src="file:///C:/Users/ESTACION/Documents/Github/little_v_store/img/gfit/lentes.png" alt="Lentes de sol">
+    </div>
+    <div class="product" onclick="mostrarDetalles('file:///C:/Users/ESTACION/Documents/Github/little_v_store/img/gfit/libreta.png', 'Libreta estampado cráneo gotico 150 hojas blancas', '$50.00')">
+        <h3>Libreta</h3>
+        <img src="file:///C:/Users/ESTACION/Documents/Github/little_v_store/img/gfit/libreta.png" alt="Libreta">
+    </div>
+    <div class="product" onclick="mostrarDetalles('file:///C:/Users/ESTACION/Documents/Github/little_v_store/img/gfit/mochila.png', 'Mochila Estampado Costillar humano Negra gotica 70cm x 20cm.', '$45.00')">
+        <h3>Mochila</h3>
+        <img src="file:///C:/Users/ESTACION/Documents/Github/little_v_store/img/gfit/mochila.png" alt="Mochila">
+    </div>
+    <div class="product" onclick="mostrarDetalles('file:///C:/Users/ESTACION/Documents/Github/little_v_store/img/gfit/lampara.png', 'Lampara cráneo mate conluz led RGB adaptable.', '$55.00')">
+        <h3>Lampara</h3>
+        <img src="file:///C:/Users/ESTACION/Documents/Github/little_v_store/img/gfit/lampara.png" alt="Lampara">
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" src="" alt="Imagen del producto" style="width:100%">
+        <h2 id="modalDescription"></h2>
+        <p id="modalPrice"></p>
+        <button class="button" id="btnAgregar">Añadir al Carrito</button>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Tienda de Regalos. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
