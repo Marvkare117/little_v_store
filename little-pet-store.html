@@ -9,11 +9,12 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-image: url('img/pet/fondo 2.png');
+            background-position: center;
             color: #333;
         }
         header {
-            background-color: #df9bee;
+            background-color: rgba(223, 155, 238, 0.8);
             color: white;
             text-align: center;
             padding: 1em 0;
@@ -35,21 +36,33 @@
         }
         main {
             padding: 20px;
-            max-width: 800px;
+            max-width: 1200px;
             margin: auto;
+        }
+        h2 {
+            margin-top: 40px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
         }
         .product {
             border: 1px solid #b9e8f7;
             border-radius: 5px;
-            margin: 10px 0;
             padding: 10px;
-            background-color: #fff;
-            display: flex;
-            align-items: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .product:hover {
+            transform: scale(1.05);
         }
         .product img {
-            max-width: 100px;
-            margin-right: 15px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
         }
         footer {
             text-align: center;
@@ -60,8 +73,36 @@
             bottom: 0;
             width: 100%;
         }
-        h2 {
-            margin-top: 40px;
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 90%;
+        }
+        .close {
+            cursor: pointer;
+            color: red;
+            float: right;
+        }
+        .product-info {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        .product-info strong {
+            color: #333;
         }
     </style>
 </head>
@@ -74,108 +115,105 @@
 <nav>
     <a href="#home">Inicio</a>
     <a href="#products">Productos</a>
-
 </nav>
 
 <main>
     <section id="products">
         <h2>Productos Destacados</h2>
-
-        <h3>Comida para Perros</h3>
-        <div class="product">
-            <img src="img/pet/1comidapremiun.jpg" alt="Comida para Perros 1">
-            <div>
+        <div class="grid">
+            <div class="product" onclick="showDetails('Comida Premium para Perros', 'Nutrición equilibrada para tu perro.', 'Precio: $350<br>Cantidad: 10 kg<br>Ingredientes: Carne real, vegetales, vitaminas.', 'img/pet/1comidapremiun.jpg')">
+                <img src="img/pet/1comidapremiun.jpg" alt="Comida para Perros 1">
                 <h4>Comida Premium para Perros</h4>
-                <p>Nutrición balanceada con ingredientes naturales.</p>
             </div>
-        </div>
-        <div class="product">
-            <img src="img/pet/2comidahumeda.jpg" alt="Comida para Perros 2">
-            <div>
+            <div class="product" onclick="showDetails('Comida Húmeda para Perros', 'Deliciosa y fácil de digerir.', 'Precio: $3.49 por lata<br>Cantidad: 400g<br>Ingredientes: Carne, arroz, verduras.', 'img/pet/2comidahumeda.jpg')">
+                <img src="img/pet/2comidahumeda.jpg" alt="Comida para Perros 2">
                 <h4>Comida Húmeda para Perros</h4>
-                <p>Deliciosa y fácil de digerir, perfecta para todos los tamaños.</p>
             </div>
-        </div>
-        <div class="product">
-            <img src="img/pet/3snackperro.jpg" alt="Comida para Perros 3">
-            <div>
+            <div class="product" onclick="showDetails('Snacks Naturales para Perros', 'Premios saludables y sabrosos.', 'Precio: $15.99<br>Cantidad: 500 g<br>Ingredientes: Pollo, batata.', 'img/pet/3snackperro.jpg')">
+                <img src="img/pet/3snackperro.jpg" alt="Comida para Perros 3">
                 <h4>Snacks Naturales para Perros</h4>
-                <p>Premios saludables y sabrosos para tu mascota.</p>
             </div>
-        </div>
-        <div class="product">
-            <img src="img/pet/4csingranos.webp" alt="Comida para Perros 4">
-            <div>
+            <div class="product" onclick="showDetails('Comida para Perros Sin Granos', 'Ideal para perros con sensibilidades.', 'Precio: $27.99<br>Cantidad: 11 kg<br>Ingredientes: Carne, guisantes, zanahorias.', 'img/pet/4csingranos.webp')">
+                <img src="img/pet/4csingranos.jpg" alt="Comida para Perros 4">
                 <h4>Comida para Perros Sin Granos</h4>
-                <p>Ideal para perros con sensibilidades alimentarias.</p>
             </div>
-        </div>
-
-        <h3>Juguetes para Gatos</h3>
-        <div class="product">
-            <img src="img/pet/1jugeteGato.webp" alt="Juguete para Gatos 1">
-            <div>
+            <div class="product" onclick="showDetails('Juguete Interactivo', 'Estimula la mente de tu gato.', 'Precio: $12.99<br>Materiales: Plástico resistente.', 'img/pet/1jugeteGato.webp')">
+                <img src="img/pet/1jugeteGato.webp" alt="Juguete para Gatos 1">
                 <h4>Juguete Interactivo</h4>
-                <p>Estimula la mente de tu gato mientras juega.</p>
             </div>
-        </div>
-        <div class="product">
-            <img src="img/pet/2pelotagato.jpg" alt="Juguete para Gatos 2">
-            <div>
+            <div class="product" onclick="showDetails('Pelota de Catnip', 'El catnip mantendrá a tu gato entretenido.', 'Precio: $5.99<br>Materiales: Tela, catnip orgánico.', 'img/pet/2pelotagato.jpg')">
+                <img src="img/pet/2pelotagato.jpg" alt="Juguete para Gatos 2">
                 <h4>Pelota de Catnip</h4>
-                <p>El catnip mantendrá a tu gato entretenido durante horas.</p>
             </div>
-        </div>
-        <div class="product">
-            <img src="img/pet/3rascadorgato.jpg" alt="Juguete para Gatos 3">
-            <div>
+            <div class="product" onclick="showDetails('Rascador para Gatos', 'Protege tus muebles mientras juega.', 'Precio: $29.99<br>Materiales: Sisal y cartón reciclado.', 'img/pet/3rascadorgato.jpg')">
+                <img src="img/pet/3rascadorgato.jpg" alt="Juguete para Gatos 3">
                 <h4>Rascador para Gatos</h4>
-                <p>Protege tus muebles y proporciona diversión a tu gato.</p>
             </div>
-        </div>
-        <div class="product">
-            <img src="img/pet/4vatitagato.jpg" alt="Juguete para Gatos 4">
-            <div>
+            <div class="product" onclick="showDetails('Varita con Plumas', 'El juguete perfecto para jugar con tu gato.', 'Precio: $7.99<br>Materiales: Plumas naturales, cuerda.', 'img/pet/4vatitagato.jpg')">
+                <img src="img/pet/4vatitagato.jpg" alt="Juguete para Gatos 4">
                 <h4>Varita con Plumas</h4>
-                <p>El juguete perfecto para jugar con tu gato.</p>
             </div>
-        </div>
-
-        <h3>Acuarios</h3>
-        <div class="product">
-            <img src="img/pet/1acuario20gl.jpg" alt="Acuario 1">
-            <div>
+            <div class="product" onclick="showDetails('Casa para Perros', 'Cómoda y espaciosa para tu mascota.', 'Precio: $99.99<br>Materiales: Madera tratada.', 'img/pet/casa_perros.jpg')">
+                <img src="img/pet/1casadog.jpg" alt="Casa para Perros">
+                <h4>Casa para Perros</h4>
+            </div>
+            <div class="product" onclick="showDetails('Cama para Perros', 'Suave y acogedora para un buen descanso.', 'Precio: $45.99<br>Materiales: Algodón, espuma.', 'img/pet/cama_perros.jpg')">
+                <img src="img/pet/2camadog.jpg" alt="Cama para Perros">
+                <h4>Cama para Perros</h4>
+            </div>
+            <div class="product" onclick="showDetails('Juguetes para Perros', 'Diversión asegurada para tu amigo peludo.', 'Precio: Varía entre $8.99 - $19.99<br>Materiales: Caucho, tela.', 'img/pet/jugetes_perros.jpg')">
+                <img src="img/pet/3jugetedog.jpg" alt="Juguetes para Perros">
+                <h4>Juguetes para Perros</h4>
+            </div>
+            <div class="product" onclick="showDetails('Casa para Hamsters', 'Pequeña y segura para tu hámster.', 'Precio: $19.99<br>Materiales: Plástico no tóxico.', 'img/pet/casa_hamsters.jpg')">
+                <img src="img/pet/4casakuy.jpg" alt="Casa para Cuyos">
+                <h4>Casa para Hamsters</h4>
+            </div>
+            <div class="product" onclick="showDetails('Acuario de 20 Gallones', 'Perfecto para principiantes y entusiastas.', 'Precio: $119.99<br>Materiales: Cristal templado.', 'img/pet/1acuario20gl.jpg')">
+                <img src="img/pet/1acuario20gl.jpg" alt="Acuario 1">
                 <h4>Acuario de 20 Gallones</h4>
-                <p>Perfecto para principiantes y entusiastas.</p>
             </div>
-        </div>
-        <div class="product">
-            <img src="img/pet/2acuario50gl.jpg" alt="Acuario 2">
-            <div>
+            <div class="product" onclick="showDetails('Acuario de 50 Gallones', 'Espacio amplio para varios peces.', 'Precio: $249.99<br>Materiales: Cristal templado.', 'img/pet/2acuario50gl.jpg')">
+                <img src="img/pet/2acuario50gl.jpg" alt="Acuario 2">
                 <h4>Acuario de 50 Gallones</h4>
-                <p>Espacio amplio para varios peces.</p>
             </div>
-        </div>
-        <div class="product">
-            <img src="img/pet/3acuafiltro.webp" alt="Acuario 3">
-            <div>
+            <div class="product" onclick="showDetails('Acuario con Filtro Incorporado', 'Sistema de filtración fácil de usar.', 'Precio: $199.99<br>Materiales: Cristal templado.', 'img/pet/3acuafiltro.webp')">
+                <img src="img/pet/3acuafiltro.webp" alt="Acuario 3">
                 <h4>Acuario con Filtro Incorporado</h4>
-                <p>Sistema de filtración fácil de usar.</p>
             </div>
-        </div>
-        <div class="product">
-            <img src="img/pet/4pecera.jpg" alt="Acuario 4">
-            <div>
+            <div class="product" onclick="showDetails('Acuario de Cristal Templado', 'Diseño elegante y resistente.', 'Precio: $299.99<br>Materiales: Cristal templado.', 'img/pet/4pecera.jpg')">
+                <img src="img/pet/4pecera.jpg" alt="Acuario 4">
                 <h4>Acuario de Cristal Templado</h4>
-                <p>Diseño elegante y resistente.</p>
             </div>
         </div>
     </section>
 </main>
 
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-description"></p>
+        <img id="modal-image" src="" alt="" style="width: 100%; height: auto;">
+    </div>
+</div>
+
 <footer>
     <p>&copy; 2025 Little Pet Store. Todos los derechos reservados.</p>
 </footer>
+
+<script>
+    function showDetails(title, shortDescription, details, imageUrl) {
+        document.getElementById('modal-title').innerText = title;
+        document.getElementById('modal-description').innerHTML = shortDescription + '<br><br>' + details; // Mostrar descripción corta y detalles
+        document.getElementById('modal-image').src = imageUrl;
+        document.getElementById('modal').style.display = 'flex';
+    }
+
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+    }
+</script>
 
 </body>
 </html>
