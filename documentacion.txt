@@ -1,0 +1,6 @@
+MalleliLoza
+A cargo del diseño de la página de la subtienda Little Pet Store.
+Agregue una imagen de fondo, utilice una paleta de colores con tonos morados, negro y blanco.
+Agrege imagenes de productos con sus características que se muestran al seleccionar el producto. Estas imagenes con un borde redondeado
+ y mostradas en forma llamativa que se expanden ligeramente al pasar sobre ellas el cursor.
+un encabezado que redirecciona a las demás páginas de Little V Store y en el pie de página los derechos reserbados.
