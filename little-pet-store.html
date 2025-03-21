@@ -134,7 +134,7 @@
                 <img src="img/pet/3snackperro.jpg" alt="Comida para Perros 3">
                 <h4>Snacks Naturales para Perros</h4>
             </div>
-            <div class="product" onclick="showDetails('Comida para Perros Sin Granos', 'Ideal para perros con sensibilidades.', 'Precio: $27.99<br>Cantidad: 11 kg<br>Ingredientes: Carne, guisantes, zanahorias.', 'img/pet/4csingranos.webp')">
+            <div class="product" onclick="showDetails('Comida para Perros Sin Granos', 'Ideal para perros con sensibilidades.', 'Precio: $27.99<br>Cantidad: 11 kg<br>Ingredientes: Carne, guisantes, zanahorias.', 'img/pet/4csingranos.jpg')">
                 <img src="img/pet/4csingranos.jpg" alt="Comida para Perros 4">
                 <h4>Comida para Perros Sin Granos</h4>
             </div>
@@ -154,19 +154,19 @@
                 <img src="img/pet/4vatitagato.jpg" alt="Juguete para Gatos 4">
                 <h4>Varita con Plumas</h4>
             </div>
-            <div class="product" onclick="showDetails('Casa para Perros', 'Cómoda y espaciosa para tu mascota.', 'Precio: $99.99<br>Materiales: Madera tratada.', 'img/pet/casa_perros.jpg')">
+            <div class="product" onclick="showDetails('Casa para Perros', 'Cómoda y espaciosa para tu mascota.', 'Precio: $99.99<br>Materiales: Madera tratada.', 'img/pet/1casadog.jpg')">
                 <img src="img/pet/1casadog.jpg" alt="Casa para Perros">
                 <h4>Casa para Perros</h4>
             </div>
-            <div class="product" onclick="showDetails('Cama para Perros', 'Suave y acogedora para un buen descanso.', 'Precio: $45.99<br>Materiales: Algodón, espuma.', 'img/pet/cama_perros.jpg')">
+            <div class="product" onclick="showDetails('Cama para Perros', 'Suave y acogedora para un buen descanso.', 'Precio: $45.99<br>Materiales: Algodón, espuma.', 'img/pet/2camadog.jpg')">
                 <img src="img/pet/2camadog.jpg" alt="Cama para Perros">
                 <h4>Cama para Perros</h4>
             </div>
-            <div class="product" onclick="showDetails('Juguetes para Perros', 'Diversión asegurada para tu amigo peludo.', 'Precio: Varía entre $8.99 - $19.99<br>Materiales: Caucho, tela.', 'img/pet/jugetes_perros.jpg')">
+            <div class="product" onclick="showDetails('Juguetes para Perros', 'Diversión asegurada para tu amigo peludo.', 'Precio: Varía entre $8.99 - $19.99<br>Materiales: Caucho, tela.', 'img/pet/3jugetedog.jpg')">
                 <img src="img/pet/3jugetedog.jpg" alt="Juguetes para Perros">
                 <h4>Juguetes para Perros</h4>
             </div>
-            <div class="product" onclick="showDetails('Casa para Hamsters', 'Pequeña y segura para tu hámster.', 'Precio: $19.99<br>Materiales: Plástico no tóxico.', 'img/pet/casa_hamsters.jpg')">
+            <div class="product" onclick="showDetails('Casa para Hamsters', 'Pequeña y segura para tu hámster.', 'Precio: $19.99<br>Materiales: Plástico no tóxico.', 'img/pet/4casakuy.jpg')">
                 <img src="img/pet/4casakuy.jpg" alt="Casa para Cuyos">
                 <h4>Casa para Hamsters</h4>
             </div>
@@ -211,9 +211,19 @@
         document.getElementById('modal').style.display = 'flex';
     }
 
+    // Función para cerrar la modal
     function closeModal() {
         document.getElementById('modal').style.display = 'none';
     }
+
+    // Agregar un evento para cerrar la modal al hacer clic fuera de ella
+    window.onclick = function(event) {
+        const modal = document.getElementById('modal');
+        // Verificar si el clic fue en el área fuera de la modal
+        if (event.target === modal) {
+            closeModal();
+        }
+    };
 </script>
 
 </body>
