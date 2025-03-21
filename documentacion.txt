@@ -4,3 +4,36 @@ Agregue una imagen de fondo, utilice una paleta de colores con tonos morados, ne
 Agrege imagenes de productos con sus características que se muestran al seleccionar el producto. Estas imagenes con un borde redondeado
  y mostradas en forma llamativa que se expanden ligeramente al pasar sobre ellas el cursor.
 un encabezado que redirecciona a las demás páginas de Little V Store y en el pie de página los derechos reserbados.
+Miguel Angel Reyes Verdin 
+Estructura del Documento HTML
+    1. Cabecera (<head>)
+        Charset: Se establece el conjunto de caracteres a UTF-8 para soportar caracteres especiales.
+        Viewport: Se configura para ser responsivo, adaptándose a diferentes tamaños de pantalla.
+        Estilo: Se vincula una hoja de estilos CSS externa (css/little-wood-store.css).
+        Título: Se define el título de la página como "Little Wood Store".
+    2. Cuerpo (<body>)
+        Encabezado (<header>):
+            Contiene el título principal y un menú de navegación con enlaces a otras secciones de la tienda.
+        Contenido Principal (<main>):
+            Sección de Productos:
+                Se presenta una lista de artículos de madera disponibles con imágenes, descripciones y precios.
+                Se organiza en una cuadrícula que facilita la visualización de los productos.
+                Cada producto incluye un botón de "Comprar".
+        Pie de Página (<footer>):
+            Información de Contacto: Se proporciona un correo electrónico de contacto.
+            Redes Sociales: Enlaces a las plataformas de redes sociales de la tienda.
+        Formulario de Contacto: Un formulario para que los usuarios envíen consultas o mensajes, incluyendo campos para nombre, correo electrónico y mensaje.
+            Características Principales
+        Diseño Responsivo: El uso del elemento <meta name="viewport"> permite que la página se adapte a diferentes dispositivos, asegurando una buena experiencia de usuario en móviles y tablets.
+            Interactividad: Aunque el HTML no incluye JavaScript para la funcionalidad del botón "Comprar" o el envío del formulario, se puede integrar fácilmente en futuras actualizaciones.
+        Organización Visual: Los productos están dispuestos en un formato de cuadrícula, lo que mejora la usabilidad y atractivo visual.
+            Tecnologías Utilizadas
+        HTML: Se utilizó HTML5 para construir la estructura de la página.
+        CSS: Se vincula una hoja de estilos externa para el diseño visual (no se proporciona código CSS en este documento).
+            Futuras Mejoras
+        Funcionalidad del Botón "Comprar": Implementar un sistema de carrito de compras que permita a los usuarios seleccionar y comprar productos.
+        Validación del Formulario: Añadir validación en el lado del cliente para mejorar la experiencia del usuario.
+        Integración con Backend: Conectar el formulario de contacto a un servicio que permita recibir y gestionar mensajes de los usuarios.
+        Conclusión
+        La página "Little Wood Store" es un buen comienzo para una tienda en línea que ofrece productos de madera. Con una estructura clara y un diseño responsivo, está lista para ser mejorada con funcionalidades adicionales que enriquecerán la experiencia del usuario.
+
